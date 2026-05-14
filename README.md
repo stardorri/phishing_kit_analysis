@@ -6,6 +6,11 @@ This project documents my analysis of a cryptocurrency phishing kit from a cyber
 
 The investigation focused on identifying how the kit worked, where collected data was stored, what services were used, and how stolen information was exfiltrated.
 
+## Full Report
+
+Read the full investigation report here:
+[View Report](report.md)
+
 ## Key Findings
 
 - The phishing kit targeted MetaMask users.
