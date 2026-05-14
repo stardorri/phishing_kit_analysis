@@ -2,34 +2,38 @@
 
 ## Overview
 
-This repository documents my analysis of a cryptocurrency phishing kit from a cybersecurity lab. The kit was designed to impersonate a crypto wallet connection page and collect wallet recovery seed phrases from victims.
+This project documents my analysis of a cryptocurrency phishing kit from a cybersecurity lab. The kit targeted MetaMask users and attempted to collect wallet recovery seed phrases through a fake wallet connection page.
 
-The investigation focused on reviewing the phishing kit files, identifying how the kit worked, locating where collected data was stored, and determining how stolen information was exfiltrated.
+The investigation focused on identifying how the kit worked, where collected data was stored, what services were used, and how stolen information was exfiltrated.
 
-All sensitive values, including seed phrases, Telegram bot tokens, chat IDs, and actor identifiers, have been redacted from the screenshots and report.
+## Key Findings
 
----
+- The phishing kit targeted MetaMask users.
+- The main phishing logic was contained in `metamask.php`.
+- The kit was written in PHP.
+- Victim IP and geolocation data were collected using Sypex Geo.
+- Captured seed phrases were stored locally in `log.txt`.
+- Stolen data was exfiltrated through Telegram.
+- Three collected seed phrase entries were identified.
+- Sensitive values were redacted before publication.
 
-## Skills Practiced
+## Skills Demonstrated
 
-- Static analysis of suspicious files
+- Static analysis
 - Phishing kit investigation
 - PHP source code review
 - Log file analysis
 - Evidence collection
-- Identifying credential exfiltration methods
-- Extracting indicators of compromise
-- Writing a security investigation report
+- Indicator identification
+- Security report writing
 
----
-
-## Repository Structure
+## Repository Contents
 
 ```text
 phishing-kit-analysis/
 │
 ├── README.md
-│
+├── report.md
 └── screenshots/
     ├── walletdirectory.png
     ├── metamaskphp.png
